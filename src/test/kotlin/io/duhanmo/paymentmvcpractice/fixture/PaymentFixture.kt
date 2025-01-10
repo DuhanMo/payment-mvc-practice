@@ -4,7 +4,6 @@ import io.duhanmo.paymentmvcpractice.core.common.Money
 import io.duhanmo.paymentmvcpractice.core.payment.model.Currency.KRW
 import io.duhanmo.paymentmvcpractice.core.payment.model.Payment
 import io.duhanmo.paymentmvcpractice.core.payment.model.PaymentStatus.APPROVED
-import java.math.BigDecimal
 import java.time.Instant.now
 
 fun createPayment(
@@ -13,7 +12,7 @@ fun createPayment(
 ) = Payment(
     orderId = orderId,
     paymentKey = paymentKey,
-    money = Money(BigDecimal(10_000)),
+    money = Money(10_000),
     currency = KRW,
     status = APPROVED,
     createdAt = now(),

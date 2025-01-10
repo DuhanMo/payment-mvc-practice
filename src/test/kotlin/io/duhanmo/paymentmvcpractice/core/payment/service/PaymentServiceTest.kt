@@ -8,7 +8,6 @@ import io.duhanmo.paymentmvcpractice.mock.FakePaymentKeyGenerator
 import io.duhanmo.paymentmvcpractice.mock.FakePaymentRepository
 import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.shouldBe
-import java.math.BigDecimal
 import java.util.UUID
 
 class PaymentServiceTest : BehaviorSpec({
@@ -21,7 +20,7 @@ class PaymentServiceTest : BehaviorSpec({
         val command =
             PaymentCreateCommand(
                 orderId = UUID.randomUUID().toString(),
-                money = Money(BigDecimal(10_000)),
+                money = Money(10_000),
                 currency = KRW,
             )
 
@@ -39,7 +38,7 @@ class PaymentServiceTest : BehaviorSpec({
         val command =
             PaymentCreateCommand(
                 orderId = UUID.randomUUID().toString(),
-                money = Money(BigDecimal(10_000)),
+                money = Money(10_000),
                 currency = KRW,
             )
 

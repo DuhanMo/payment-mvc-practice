@@ -12,7 +12,6 @@ import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 import jakarta.persistence.Table
-import java.math.BigDecimal
 import java.time.Instant
 
 @Table(name = "payment")
@@ -57,7 +56,7 @@ class PaymentEntity(
             id = id,
             orderId = orderId,
             paymentKey = paymentKey,
-            money = Money(BigDecimal(amount)),
+            money = Money(amount),
             currency = currency,
             status = status,
             createdAt = createdAt,
