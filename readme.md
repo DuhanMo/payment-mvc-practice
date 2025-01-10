@@ -1,4 +1,4 @@
-# 예제: 간단한 결제 서비스 API 구현
+# 예제: 간단한 결제 서비스 API 구현 (GPT 작성)
 ## 시나리오
 - 간단한 결제(또는 주문) 처리 시스템의 일부 모듈을 구현해야 합니다.
 - 결제요청, 결제정보 조회, 결제 취소의 기능을 제공하는 REST API를 Kotlin(혹은 Java)와 Spring Boot를 활용해 작성해보세요.
@@ -20,12 +20,15 @@
 **응답 바디 예시:**
 ```json
 {
-"paymentId": "PAY-20250108-0001",
-"orderId": "ORDER-20250108-0001",
-"amount": 15000,
-"currency": "KRW",
-"createdAt": "2025-01-08T10:15:30",
-"status": "APPROVED"
+  "message": "",
+  "body": {
+    "paymentId": "PAY-20250108-0001",
+    "orderId": "ORDER-20250108-0001",
+    "amount": 15000,
+    "currency": "KRW",
+    "createdAt": "2025-01-08T10:15:30",
+    "status": "APPROVED"
+  }
 }
 ```
 **조건:**
@@ -41,12 +44,15 @@
 **응답 바디 예시:**
 ```json
 {
-"paymentId": "PAY-20250108-0001",
-"orderId": "ORDER-20250108-0001",
-"amount": 15000,
-"currency": "KRW",
-"createdAt": "2025-01-08T10:15:30",
-"status": "APPROVED"
+  "message": "",
+  "body": {
+    "paymentId": "PAY-20250108-0001",
+    "orderId": "ORDER-20250108-0001",
+    "amount": 15000,
+    "currency": "KRW",
+    "createdAt": "2025-01-08T10:15:30",
+    "status": "APPROVED"
+  }
 }
 ```
 **조건**:
@@ -59,9 +65,12 @@
 **응답 바디 예시:**
 ```json
 {
-"paymentId": "PAY-20250108-0001",
-"status": "CANCELED",
-"canceledAt": "2025-01-08T11:00:00"
+  "message": "",
+  "body": {
+    "paymentId": "PAY-20250108-0001",
+    "status": "CANCELED",
+    "canceledAt": "2025-01-08T11:00:00"
+  }
 }
 ```
 **조건:**
