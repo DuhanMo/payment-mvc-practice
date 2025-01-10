@@ -6,7 +6,7 @@ import io.duhanmo.paymentmvcpractice.core.payment.port.PaymentKeyGenerator
 import io.duhanmo.paymentmvcpractice.core.payment.port.PaymentRepository
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
-import java.time.LocalDateTime.now
+import java.time.Instant.now
 
 @Service
 class PaymentService(

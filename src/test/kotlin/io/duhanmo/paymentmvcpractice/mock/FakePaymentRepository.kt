@@ -18,6 +18,7 @@ class FakePaymentRepository : PaymentRepository {
                     currency = payment.currency,
                     status = payment.status,
                     createdAt = payment.createdAt,
+                    updatedAt = payment.updatedAt,
                     canceledAt = payment.canceledAt,
                 )
             data.add(newPayment)

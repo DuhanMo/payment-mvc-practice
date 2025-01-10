@@ -1,7 +1,7 @@
 package io.duhanmo.paymentmvcpractice.core.payment.model
 
 import io.duhanmo.paymentmvcpractice.core.common.Money
-import java.time.LocalDateTime
+import java.time.Instant
 
 class Payment(
     val id: Long = 0L,
@@ -10,7 +10,7 @@ class Payment(
     val money: Money,
     val currency: Currency,
     val status: PaymentStatus,
-    val createdAt: LocalDateTime,
-    val updatedAt: LocalDateTime,
-    val canceledAt: LocalDateTime?,
+    val createdAt: Instant,
+    val updatedAt: Instant,
+    val canceledAt: Instant?,
 )

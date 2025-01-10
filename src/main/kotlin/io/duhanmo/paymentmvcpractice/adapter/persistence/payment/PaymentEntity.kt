@@ -5,6 +5,7 @@ import io.duhanmo.paymentmvcpractice.core.payment.model.Currency
 import io.duhanmo.paymentmvcpractice.core.payment.model.Payment
 import io.duhanmo.paymentmvcpractice.core.payment.model.PaymentStatus
 import jakarta.persistence.Column
+import jakarta.persistence.Entity
 import jakarta.persistence.EnumType.STRING
 import jakarta.persistence.Enumerated
 import jakarta.persistence.GeneratedValue
@@ -12,9 +13,10 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 import jakarta.persistence.Table
 import java.math.BigDecimal
-import java.time.LocalDateTime
+import java.time.Instant
 
 @Table(name = "payment")
+@Entity
 class PaymentEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,11 +34,11 @@ class PaymentEntity(
     @Enumerated(STRING)
     val status: PaymentStatus,
     @Column(name = "created_at")
-    val createdAt: LocalDateTime,
+    val createdAt: Instant,
     @Column(name = "updated_at")
-    val updatedAt: LocalDateTime,
+    val updatedAt: Instant,
     @Column(name = "canceled_at")
-    val canceledAt: LocalDateTime?,
+    val canceledAt: Instant?,
 ) {
     constructor(model: Payment) : this(
         id = model.id,
