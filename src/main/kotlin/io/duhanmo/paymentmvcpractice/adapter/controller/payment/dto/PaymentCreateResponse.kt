@@ -5,7 +5,6 @@ import io.duhanmo.paymentmvcpractice.core.payment.model.Payment
 import io.duhanmo.paymentmvcpractice.core.payment.model.PaymentStatus
 
 data class PaymentCreateResponse(
-    val id: Long,
     val orderId: String,
     val paymentKey: String,
     val amount: Long,
@@ -15,7 +14,6 @@ data class PaymentCreateResponse(
     companion object {
         fun from(payment: Payment): PaymentCreateResponse =
             PaymentCreateResponse(
-                id = payment.id,
                 orderId = payment.orderId,
                 paymentKey = payment.paymentKey,
                 amount = payment.money.amount.toLong(),
